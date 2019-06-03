@@ -80,6 +80,16 @@ header{
 			background-color: white;
 			border: 2px solid green;
 		}
+
+		.price{
+			font-family: monospace;
+			font-size:  22px;
+		}
+		.myp{
+			font-family: monospace;
+			font-size:  22px;
+			
+		}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
@@ -143,7 +153,11 @@ header{
 			</div>		
 					
 		</div>
+		
+
+		<div id="basket">
 			
+		</div>
 			
 	</div>
 	
@@ -152,71 +166,5 @@ header{
 	<script src="js/script.js"></script>
 
 
-
-	<script>
-
-		
-
-
-		/*var myarray  = [];//array Price deve essere sempre fuori dalla funzione
-		var myarray2  = [];//array Brand
-		var buttons = document.getElementsByClassName("btn");
-		//console.log(buttons);
-		for (let i = 0; i < buttons.length ; i++) {
-			buttons[i].addEventListener("click",function(){mia(scarpe[i])},false);  // fa funzionre i bottoni add
-		}
-
-
-function mia(obj){
-	//console.log(obj);//
-	document.getElementById("cart_text2").innerHTML += obj.brand +" "+ obj.price+ "€<br>";
-
-	//daniele
-	document.getElementById("cart_text").innerHTML += obj.price +"+<br>";
-	
-	myarray.push(obj.price);
-	myarray2.push(obj.brand);
-
-
-	console.log(myarray2);
-	//console.log(myarray);// elementi array
-
-	
-	document.getElementById("cart_text3").innerHTML += sum()+" €<br>" ;  // price on screen
-
-		}
-
-
-
-		function sum() {
-
-		var total = 0;
-
-			for(var i = 0; i < myarray.length; i += 1) {  
-
-			total += Number(myarray[i]);
-
-			}
-		
-		return total;
-		//console.log(total);   // console price3
-		};
-
-
-
-
-		document.getElementById("canc").addEventListener("click",deleter,false);
-
-		function deleter(){
-
-			myarray.pop(); // price deleter
-
-			document.getElementById("cart_text3").innerHTML = sum()+" €<br>" ; // con piu davanti all´ = aggiunge // price deleter
-
-		}
-
-*/
-
-	</script>
 </body>
 </html>
