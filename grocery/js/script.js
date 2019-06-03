@@ -1,13 +1,12 @@
+$(document).ready(function() {
+	var arr = $(".myimgs");
+	var name = $("h3");
 
+	for (let i = 0; i < arr.length; i++) {				
 
-
-
-function insertItems() {
-	for (let i = 0; i < items.length; i++) {
-		var member = '<h3>' + items[i].name + '<\/h3><br>';
-			member += '<img src=\"' + items[i].pic +'\" class=\"photo\">';
-			member += '<div class=\"price\">' + items[i].price + '<\/div>';
-
-		document.getElementsByClassName('team_member')[i].innerHTML = member;
+		$(arr[i]).attr("src", items[i].pic);
+		$(name[i]).text(items[i].name).after("<div> € "+items[i].price+"</div");
+		$(".items1 div div").attr("class", "price");
+	
 	}
-}
+});
