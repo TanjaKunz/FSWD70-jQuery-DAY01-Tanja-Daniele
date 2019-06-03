@@ -14,12 +14,12 @@
 		header div{
 			width: 100%; 
 			height: 80px;
-			background-color: lightgray;
+			background-color: #66bd66;
 		}
 		nav{
-			background-color: gold;
+			border: 2px solid #ff992d;
 			height: 40px;
-
+			border-radius: 0px  0px 20px 20px ;
 		}
 		ul{
 			margin: 0;
@@ -53,7 +53,7 @@
 
 		}
 		#container{
-			background-color:  lightblue;
+			
 			width: 99%;
 			height: 60em;
 			
@@ -61,7 +61,16 @@
 		#container>div{
 			height: 28em;
 			margin-bottom: 2em;
-			background-color:  lightcoral;
+			
+
+						/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#84e54b+0,91e842+100&0.68+0,0.57+100 */
+			background: -moz-linear-gradient(left,  rgba(132,229,75,0.68) 0%, rgba(145,232,66,0.57) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left,  rgba(132,229,75,0.68) 0%,rgba(145,232,66,0.57) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right,  rgba(132,229,75,0.68) 0%,rgba(145,232,66,0.57) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad84e54b', endColorstr='#9191e842',GradientType=1 ); /* IE6-9 */
+
+
+
 			width: 99%;
 			display: flex;
 			justify-content: space-around;
@@ -71,6 +80,7 @@
 			height: 20em;
 		}
 	</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
 
@@ -88,46 +98,71 @@
 		</nav>
 	</header><!-- /header -->
 	<div id="hero">
-		<img src="img.jpg" alt="">
+		<img src="img/img.jpg" alt="">
 	</div>
 
 		<div id="container">
 
 		<div id="items1">
 			<div>
-				<img src="s1.jpg" alt="">
+				<img src="img/s1.jpg" class="myimgs" alt="">
 				<h3>brand price</h3>
 				<input class="btn" type="button" value="Add to your cart" id="sport" name="">
 
 			</div>
 			<div>
-				<img src="s2.jpg" alt="">
+				<img src="img/s2.jpg" class="myimgs"  alt="">
 				<h3>brand price</h3>
 				<input class="btn" type="button" value="Add to your cart" id="sport2" name="">
 			</div>
 			<div>
-				<img src="s3.jpg" alt="">
+				<img src="img/s3.jpg" class="myimgs"  alt="">
 				<h3>brand price</h3>
 				<input class="btn" type="button" value="Add to your cart" id="sport3" name="">
 			</div>		
 					
-					
+		</div>
 
+		<div id="items2">
+			<div>
+				<img src="img/s1.jpg" class="myimgs"  alt="">
+				<h3>brand price</h3>
+				<input class="btn" type="button" value="Add to your cart" id="sport" name="">
+
+			</div>
+			<div>
+				<img src="img/s2.jpg" class="myimgs"  alt="">
+				<h3>brand price</h3>
+				<input class="btn" type="button" value="Add to your cart" id="sport2" name="">
+			</div>
+			<div>
+				<img src="img/s3.jpg" class="myimgs"  alt="">
+				<h3>brand price</h3>
+				<input class="btn" type="button" value="Add to your cart" id="sport3" name="">
+			</div>		
+					
 		</div>
 			
-			<span> <button id="canc">DELETE LAST ITEM</button></span>
-
-			<div id="cart">
-			<h2 id="cart_text"></h2>
-			<h2 id="cart_text2"></h2>
-			<h2 id="cart_text3"></h2>
-			</div>
+			
 	</div>
 	
 
 	<script src="items.json"></script>
+
+
+
 	<script>
-		var myarray  = [];//array Price deve essere sempre fuori dalla funzione
+
+		var arr = $(".myimgs");
+		console.log(arr);
+
+		for(let i = 0; i < arr.length; i++){
+
+			arr[i].attr("src", "");
+		}
+
+
+		/*var myarray  = [];//array Price deve essere sempre fuori dalla funzione
 		var myarray2  = [];//array Brand
 		var buttons = document.getElementsByClassName("btn");
 		//console.log(buttons);
@@ -178,13 +213,13 @@ function mia(obj){
 
 		function deleter(){
 
-		myarray.pop(); // price deleter
+			myarray.pop(); // price deleter
 
-		document.getElementById("cart_text3").innerHTML = sum()+" €<br>" ; // con piu davanti all´ = aggiunge // price deleter
+			document.getElementById("cart_text3").innerHTML = sum()+" €<br>" ; // con piu davanti all´ = aggiunge // price deleter
 
 		}
 
-
+*/
 
 	</script>
 </body>
